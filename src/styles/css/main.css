@@ -364,4 +364,10 @@ body {
     .add-task__button:hover {
       background-color: #024eb0; }
 
+.tasks-list-container {
+  background-color: #717171;
+  border-radius: 0.5rem;
+  grid-column: 1 / 2;
+  padding: 2rem 5rem 5rem; }
+
 /*# sourceMappingURL=main.css.map */
