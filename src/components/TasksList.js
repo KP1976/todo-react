@@ -1,10 +1,16 @@
 import React from 'react';
+import Task from './Task';
 
 const TasksList = () => {
 	return (
-		<div>
-			<ul className="tasks-list" />
-		</div>
+		<ul className="tasks-list">
+			<Task />
+			<Task />
+			<Task />
+			<Task />
+			<Task />
+			<Task />
+		</ul>
 	);
 };
 
