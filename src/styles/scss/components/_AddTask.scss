@@ -1,0 +1,44 @@
+.add-task {
+	display: grid;
+	grid-gap: 0.6rem 1.6rem;
+	grid-template-columns: 62.4rem 12.2rem;
+	grid-template-rows: auto auto;
+
+	&__label {
+		font-size: 1.8rem;
+		font-weight: $font-normal;
+		grid-column: 1 / 2;
+		grid-row: 1 / 2;
+	}
+
+	&__input {
+		background-color: $clr-text;
+		border: none;
+		border-radius: $main-radius;
+		font-size: 2rem;
+		font-weight: $font-normal;
+		grid-column: 1 / 2;
+		grid-row: 2 / 3;
+		height: 5rem;
+		outline-color: $blue;
+		padding: 1rem 2rem;
+	}
+
+	&__button {
+		background-color: $blue;
+		border: none;
+		border-radius: $main-radius;
+		cursor: pointer;
+		font-size: 2rem;
+		font-weight: $font-bold;
+		grid-column: 2 / 3;
+		grid-row: 2 / 3;
+		height: 5rem;
+		text-transform: uppercase;
+		transition: background-color 0.3s ease-in-out;
+
+		&:hover {
+			background-color: darken($blue, 15%);
+		}
+	}
+}

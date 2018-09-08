@@ -2,5 +2,7 @@
 *::before,
 *::after {
 	box-sizing: border-box;
+	color: $clr-text;
+	font-family: $font-roboto;
 	font-size: 10px;
 }

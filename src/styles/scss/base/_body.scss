@@ -1,15 +1,13 @@
 body {
 	background-color: $clr-body-background;
-	color: $clr-text;
 	margin: 0;
 	padding: 0;
-	text-align: center;
 }
 
 .title {
-	font-family: $font-roboto;
 	font-size: 5rem;
 	font-weight: $font-bold;
 	margin-bottom: 2rem;
+	text-align: center;
 	text-transform: uppercase;
 }

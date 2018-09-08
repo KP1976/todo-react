@@ -301,30 +301,67 @@ template {
 *::before,
 *::after {
   box-sizing: border-box;
+  color: #eee;
+  font-family: "Roboto", sans-serif;
   font-size: 10px; }
 
 body {
   background-color: #222;
-  color: #eee;
   margin: 0;
-  padding: 0;
-  text-align: center; }
+  padding: 0; }
 
 .title {
-  font-family: "Roboto", sans-serif;
   font-size: 5rem;
   font-weight: 700;
   margin-bottom: 2rem;
+  text-align: center;
   text-transform: uppercase; }
 
 .todo-container {
   background-color: #888;
   border-radius: 0.5rem;
   display: grid;
+  grid-gap: 1.6rem;
   grid-template-columns: 76.2rem 48.6rem;
   margin: 0 auto;
   min-height: 1rem;
   padding: 3rem 5rem 5rem;
   width: 136.4rem; }
+
+.add-task {
+  display: grid;
+  grid-gap: 0.6rem 1.6rem;
+  grid-template-columns: 62.4rem 12.2rem;
+  grid-template-rows: auto auto; }
+  .add-task__label {
+    font-size: 1.8rem;
+    font-weight: 400;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2; }
+  .add-task__input {
+    background-color: #eee;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 2rem;
+    font-weight: 400;
+    grid-column: 1 / 2;
+    grid-row: 2 / 3;
+    height: 5rem;
+    outline-color: #036ffc;
+    padding: 1rem 2rem; }
+  .add-task__button {
+    background-color: #036ffc;
+    border: none;
+    border-radius: 0.5rem;
+    cursor: pointer;
+    font-size: 2rem;
+    font-weight: 700;
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    height: 5rem;
+    text-transform: uppercase;
+    transition: background-color 0.3s ease-in-out; }
+    .add-task__button:hover {
+      background-color: #024eb0; }
 
 /*# sourceMappingURL=main.css.map */
