@@ -317,4 +317,14 @@ body {
   margin-bottom: 2rem;
   text-transform: uppercase; }
 
+.todo-container {
+  background-color: #888;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: 76.2rem 48.6rem;
+  margin: 0 auto;
+  min-height: 1rem;
+  padding: 3rem 5rem 5rem;
+  width: 136.4rem; }
+
 /*# sourceMappingURL=main.css.map */

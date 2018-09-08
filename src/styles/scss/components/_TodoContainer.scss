@@ -1,0 +1,10 @@
+.todo-container {
+	background-color: $clr-todo-background;
+	border-radius: $main-radius;
+	display: grid;
+	grid-template-columns: 76.2rem 48.6rem;
+	margin: 0 auto;
+	min-height: 1rem;
+	padding: 3rem 5rem 5rem;
+	width: 136.4rem;
+}
