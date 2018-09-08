@@ -369,5 +369,18 @@ body {
   border-radius: 0.5rem;
   grid-column: 1 / 2;
   padding: 2rem 5rem 5rem; }
+  .tasks-list-container__title {
+    font-size: 2.8rem;
+    font-weight: 700;
+    margin: 0 0 1.2rem 0;
+    text-align: center;
+    text-transform: uppercase; }
+    .tasks-list-container__title--yellow {
+      color: #ebbf2d;
+      font-size: 2.8rem; }
+
+.tasks-list {
+  display: grid;
+  grid-row-gap: 2em; }
 
 /*# sourceMappingURL=main.css.map */
