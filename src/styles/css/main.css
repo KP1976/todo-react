@@ -381,6 +381,82 @@ body {
 
 .tasks-list {
   display: grid;
-  grid-row-gap: 2em; }
+  grid-row-gap: 2rem;
+  margin: 0;
+  padding: 0; }
+
+.task {
+  background-color: #eee;
+  border-radius: 0.5rem;
+  display: grid;
+  grid-template-columns: auto 6.2rem;
+  height: 6.5rem;
+  list-style: none;
+  padding: 0.6rem 2rem 0.5rem; }
+  .task .task-texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; }
+    .task .task-texts__name-task {
+      color: #222;
+      font-size: 1.8rem;
+      margin: 0; }
+    .task .task-texts__date-task {
+      color: #888;
+      font-size: 1.6rem;
+      margin: 0; }
+      .task .task-texts__date-task-value {
+        color: #888;
+        font-size: 1.6rem; }
+  .task .task-icons {
+    display: flex;
+    justify-content: space-between;
+    justify-content: space-between; }
+    .task .task-icons__modify-icon {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 0.7rem 0;
+      position: relative;
+      width: 1rem; }
+      .task .task-icons__modify-icon--yellow-circle {
+        background-color: #ebbf2d;
+        border-radius: 50%;
+        height: 1rem; }
+        .task .task-icons__modify-icon--yellow-circle::before, .task .task-icons__modify-icon--yellow-circle::after {
+          background-color: #ebbf2d;
+          border-radius: 50%;
+          content: '';
+          height: 1rem;
+          position: absolute;
+          width: 100%; }
+        .task .task-icons__modify-icon--yellow-circle::before {
+          opacity: 0.8;
+          top: 50%;
+          transform: translateY(-50%); }
+        .task .task-icons__modify-icon--yellow-circle::after {
+          bottom: calc(0px + 7px);
+          opacity: 0.6; }
+    .task .task-icons__delete-icon {
+      width: 4.5rem;
+      padding: 0.7rem 0;
+      position: relative; }
+      .task .task-icons__delete-icon--red-cross {
+        background-color: #a40000;
+        border-radius: 0.5rem;
+        height: 0.5rem;
+        position: absolute;
+        top: 50%;
+        width: 5rem;
+        transform: translateY(-50%) rotate(45deg); }
+        .task .task-icons__delete-icon--red-cross::before {
+          background-color: #a40000;
+          border-radius: 0.5rem;
+          height: 0.5rem;
+          position: absolute;
+          top: 50%;
+          width: 5rem;
+          content: '';
+          transform: translateY(-50%) rotate(-90deg); }
 
 /*# sourceMappingURL=main.css.map */

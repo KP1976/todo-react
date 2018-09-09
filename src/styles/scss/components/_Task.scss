@@ -1,0 +1,86 @@
+.task {
+	background-color: $clr-text;
+	border-radius: $main-radius;
+	display: grid;
+	grid-template-columns: auto 6.2rem;
+	height: 6.5rem;
+	list-style: none;
+	padding: 0.6rem 2rem 0.5rem;
+
+	.task-texts {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+
+		&__name-task {
+			color: $clr-body-background;
+			font-size: 1.8rem;
+			margin: 0;
+		}
+
+		&__date-task {
+			color: $clr-todo-background;
+			font-size: 1.6rem;
+			margin: 0;
+
+			&-value {
+				color: $clr-todo-background;
+				font-size: 1.6rem;
+			}
+		}
+	}
+
+	.task-icons {
+		display: flex;
+		justify-content: space-between;
+		justify-content: space-between;
+
+		&__modify-icon {
+			display: flex;
+			flex-direction: column;
+			justify-content: space-between;
+			padding: 0.7rem 0;
+			position: relative;
+			width: 1rem;
+
+			&--yellow-circle {
+				background-color: $yellow;
+				border-radius: 50%;
+				height: 1rem;
+
+				&::before,
+				&::after {
+					@include yellow-circle;
+				}
+
+				&::before {
+					opacity: 0.8;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+
+				&::after {
+					bottom: calc(0px + 7px);
+					opacity: 0.6;
+				}
+			}
+		}
+
+		&__delete-icon {
+			width: 4.5rem;
+			padding: 0.7rem 0;
+			position: relative;
+
+			&--red-cross {
+				@include red-cross;
+				transform: translateY(-50%) rotate(45deg);
+
+				&::before {
+					@include red-cross;
+					content: '';
+					transform: translateY(-50%) rotate(-90deg);
+				}
+			}
+		}
+	}
+}

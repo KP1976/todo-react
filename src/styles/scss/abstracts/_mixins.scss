@@ -1,0 +1,17 @@
+@mixin yellow-circle {
+	background-color: $yellow;
+	border-radius: 50%;
+	content: '';
+	height: 1rem;
+	position: absolute;
+	width: 100%;
+}
+
+@mixin red-cross {
+	background-color: $red;
+	border-radius: $main-radius;
+	height: 0.5rem;
+	position: absolute;
+	top: 50%;
+	width: 5rem;
+}

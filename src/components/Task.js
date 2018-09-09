@@ -8,9 +8,9 @@ class Task extends Component {
 					<p className="task-texts__name-task">
 						Zrobić kilka projektów od tutoriala WesBosa
 					</p>
-					<p className="task-texts__date">
+					<p className="task-texts__date-task">
 						Data wstawienia:{' '}
-						<span className="task-texts__date-value">06.09.2018 r.</span>
+						<span className="task-texts__date-task-value">06.09.2018 r.</span>
 					</p>
 				</div>
 				<div className="task-icons">
