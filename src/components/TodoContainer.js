@@ -1,7 +1,7 @@
 import React from 'react';
 import AddTask from './AddTask';
-import TasksListContainer from './TasksListContainer';
-import TasksDoneListContainer from './TasksDoneListContainer';
+import TasksListContainer from './TasksToDo/TasksListContainer';
+import TasksDoneListContainer from './TasksDone/TasksDoneListContainer';
 
 const TodoContainer = () => {
 	return (
