@@ -9,7 +9,6 @@ const TasksList = () => {
 			<Task />
 			<Task />
 			<Task />
-			<Task />
 		</ul>
 	);
 };
