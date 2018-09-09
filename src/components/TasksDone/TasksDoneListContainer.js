@@ -1,4 +1,5 @@
 import React from 'react';
+import TasksDoneList from './TasksDoneList';
 
 const TasksDoneListContainer = () => {
 	return (
@@ -9,6 +10,7 @@ const TasksDoneListContainer = () => {
 					zrobionych
 				</strong>
 			</h2>
+			<TasksDoneList />
 		</div>
 	);
 };
