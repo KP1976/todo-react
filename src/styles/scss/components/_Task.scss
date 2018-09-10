@@ -3,7 +3,7 @@
 	border-radius: $main-radius;
 	display: grid;
 	grid-template-columns: auto 6.2rem;
-	height: 6.5rem;
+	min-height: 6.5rem;
 	list-style: none;
 	margin-bottom: 2rem;
 	padding: 0.6rem 2rem 0.5rem;
@@ -20,6 +20,7 @@
 		&__name-task {
 			color: $clr-body-background;
 			font-size: 1.8rem;
+			line-height: 2.4rem;
 			margin: 0;
 		}
 
@@ -37,15 +38,13 @@
 	}
 
 	.task-icons {
+		align-items: center;
 		display: flex;
-		justify-content: space-between;
 		justify-content: space-between;
 
 		&__modify-icon {
-			display: flex;
 			flex-direction: column;
-			justify-content: space-between;
-			padding: 0.7rem 0;
+			height: 4rem;
 			position: relative;
 			width: 1rem;
 
@@ -53,6 +52,7 @@
 				background-color: $yellow;
 				border-radius: 50%;
 				height: 1rem;
+				margin-bottom: 0.5rem;
 
 				&::before,
 				&::after {
@@ -66,7 +66,7 @@
 				}
 
 				&::after {
-					bottom: calc(0px + 7px);
+					bottom: 0;
 					opacity: 0.6;
 				}
 			}

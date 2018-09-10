@@ -1,16 +1,21 @@
 import React, { Component } from 'react';
 
 class Task extends Component {
+	state = {
+		taskName: 'Zrobić kilka projektów od tutoriala WesBosa',
+		date: '06.09.2018 r.',
+	};
+
 	render() {
+		const { taskName, date } = this.state;
+
 		return (
 			<li className="task">
 				<div className="task-texts">
-					<p className="task-texts__name-task">
-						Zrobić kilka projektów od tutoriala WesBosa
-					</p>
+					<p className="task-texts__name-task">{taskName}</p>
 					<p className="task-texts__date-task">
 						Data wstawienia:{' '}
-						<span className="task-texts__date-task-value">06.09.2018 r.</span>
+						<span className="task-texts__date-task-value">{date}</span>
 					</p>
 				</div>
 				<div className="task-icons">

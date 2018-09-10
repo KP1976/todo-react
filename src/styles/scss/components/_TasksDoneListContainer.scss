@@ -3,9 +3,10 @@
 	border-radius: $main-radius;
 	grid-column: 2 / 3;
 	grid-row: 1 / 3;
-	padding: 2rem 5rem 5rem;
+	padding: 2rem;
 
 	.tasks-list-container__title {
 		margin-bottom: 2.3rem;
+		letter-spacing: -0.03rem;
 	}
 }

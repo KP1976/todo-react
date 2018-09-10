@@ -3,32 +3,28 @@
 	border-radius: $main-radius;
 	display: flex;
 	flex-direction: column;
-	height: 6.5rem;
+	min-height: 7.6rem;
 	justify-content: space-between;
 	list-style: none;
 	margin-bottom: 2rem;
 	padding: 0.5rem 2rem;
+	position: relative;
 
 	&:last-child {
 		margin-bottom: 0;
+	}
+
+	.red-line {
+		position: absolute;
+		z-index: 1;
 	}
 
 	&__name-task {
 		color: $clr-body-background;
 		font-size: 1.6rem;
 		margin: 0;
-		position: relative;
+		line-height: 2.1rem;
 		text-align: center;
-
-		&::before {
-			background-color: $red;
-			content: '';
-			height: 0.2rem;
-			left: 0;
-			position: absolute;
-			top: 50%;
-			width: 100%;
-		}
 	}
 
 	&__date-task {
