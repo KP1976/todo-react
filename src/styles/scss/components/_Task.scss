@@ -5,7 +5,12 @@
 	grid-template-columns: auto 6.2rem;
 	height: 6.5rem;
 	list-style: none;
+	margin-bottom: 2rem;
 	padding: 0.6rem 2rem 0.5rem;
+
+	&:last-child {
+		margin-bottom: 0;
+	}
 
 	.task-texts {
 		display: flex;
@@ -26,6 +31,7 @@
 			&-value {
 				color: $clr-todo-background;
 				font-size: 1.6rem;
+				font-weight: $font-bold;
 			}
 		}
 	}

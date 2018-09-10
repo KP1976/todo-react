@@ -8,7 +8,7 @@ class TaskDone extends Component {
 					Zrobić kilka projektów od tutoriala WesBosa
 				</p>
 				<p className="task-done__date-task">
-					Data wstawienia:{' '}
+					Data ukończenia:{' '}
 					<span className="task-done__date-task-value">06.09.2018 r.</span>
 				</p>
 			</li>

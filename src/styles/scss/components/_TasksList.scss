@@ -1,8 +1,6 @@
 .tasks-list {
-	display: flex;
-	flex-direction: column;
-	justify-content: space-between;
 	height: 41rem;
 	margin: 0;
-	padding: 0;
+	overflow-y: auto;
+	padding: 0 1rem 0 0;
 }

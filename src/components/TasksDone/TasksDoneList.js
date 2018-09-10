@@ -10,6 +10,15 @@ const TasksDoneList = () => {
 			<TaskDone />
 			<TaskDone />
 			<TaskDone />
+			<TaskDone />
+			<TaskDone />
+			<TaskDone />
+			<TaskDone />
+			<TaskDone />
+			<TaskDone />
+			<TaskDone />
+			<TaskDone />
+			<TaskDone />
 		</ul>
 	);
 };
