@@ -21,7 +21,7 @@
 			color: $clr-body-background;
 			font-size: 1.8rem;
 			line-height: 2.4rem;
-			margin: 0;
+			margin: 0 0 1rem 0;
 		}
 
 		&__date-task {
@@ -73,9 +73,10 @@
 		}
 
 		&__delete-icon {
-			width: 4.5rem;
+			height: 5.5rem;
 			padding: 0.7rem 0;
 			position: relative;
+			width: 4.5rem;
 
 			&--red-cross {
 				@include red-cross;

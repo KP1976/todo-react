@@ -1,15 +1,30 @@
+.todo-container {
+	background-color: $clr-todo-background;
+	border-radius: $main-radius;
+	display: grid;
+	grid-column-gap: 1rem;
+	grid-row-gap: 2rem;
+	grid-template-columns: 59rem 39em;
+	height: 70rem;
+	margin: 0 auto;
+	padding: 7rem 10rem;
+	width: 119rem;
+}
+
 .tasks-list-container {
 	background-color: $clr-lists-background;
 	border-radius: $main-radius;
+	display: grid;
 	grid-column: 1 / 2;
-	grid-row: 2 / 3;
-	height: 46.1rem;
+	grid-row-gap: 2rem;
+	grid-template-rows: 8rem 3.7rem auto;
+	height: 56rem;
 	padding: 2rem;
 
 	&__title {
 		font-size: 2.8rem;
 		font-weight: $font-bold;
-		margin: 0 0 2rem 0;
+		margin: 0;
 		text-align: center;
 		text-transform: uppercase;
 

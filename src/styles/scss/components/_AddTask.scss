@@ -3,7 +3,8 @@
 	grid-column-gap: 1rem;
 	grid-row-gap: 0.5rem;
 	grid-column: 1 / 2;
-	grid-template-columns: 49rem 9rem;
+	grid-row: 1 / 2;
+	grid-template-columns: 45rem 9rem;
 	grid-template-rows: auto auto;
 
 	&__label {
