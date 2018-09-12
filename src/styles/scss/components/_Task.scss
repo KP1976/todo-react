@@ -1,4 +1,5 @@
 .task {
+	animation: 0.3s dropDown;
 	background-color: $clr-text;
 	border-radius: $main-radius;
 	display: grid;
@@ -43,6 +44,7 @@
 		justify-content: space-between;
 
 		&__modify-icon {
+			cursor: pointer;
 			flex-direction: column;
 			height: 4rem;
 			position: relative;
@@ -73,6 +75,7 @@
 		}
 
 		&__delete-icon {
+			cursor: pointer;
 			height: 5.5rem;
 			padding: 0.7rem 0;
 			position: relative;
@@ -89,5 +92,17 @@
 				}
 			}
 		}
+	}
+}
+
+@keyframes dropDown {
+	0% {
+		opacity: 0;
+		transform: translateX(-100%);
+	}
+
+	100% {
+		opacity: 1;
+		transform: translateX(0);
 	}
 }

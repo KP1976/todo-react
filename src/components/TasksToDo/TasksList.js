@@ -5,6 +5,7 @@ class TasksList extends Component {
 	state = {
 		tasks: [],
 		taskName: '',
+		date: '',
 	};
 
 	onChange = e => {
@@ -13,11 +14,36 @@ class TasksList extends Component {
 
 	addTask = e => {
 		e.preventDefault();
+		const today = new Date();
+		let day = today.getDate();
+		let month = today.getMonth() + 1;
+		let year = today.getFullYear();
+		let hours = today.getHours();
+		let minutes = today.getMinutes();
+
+		if (month < 10) {
+			month = '0' + month.toString();
+		}
+
+		if (day < 10) {
+			day = '0' + day.toString();
+		}
+
+		if (hours < 10) {
+			hours = '0' + hours.toString();
+		}
+
+		if (minutes < 10) {
+			minutes = '0' + minutes.toString();
+		}
+
+		const date = `${day}.${month}.${year} godz. ${hours}:${minutes}`;
 
 		if (this.state.taskName !== '') {
 			const newTask = {
 				text: this.state.taskName,
 				key: Date.now(),
+				date: date,
 			};
 
 			this.setState(prevState => {
@@ -29,6 +55,14 @@ class TasksList extends Component {
 
 		// Czyszczenie inputa
 		this.setState({ taskName: '' });
+	};
+
+	deleteTask = key => {
+		const newTasks = this.state.tasks.filter(task => {
+			return task.key !== key;
+		});
+
+		this.setState({ tasks: newTasks });
 	};
 
 	render() {
@@ -52,7 +86,7 @@ class TasksList extends Component {
 						do zrobienia
 					</strong>
 				</h2>
-				<Task entries={this.state.tasks} />
+				<Task entries={this.state.tasks} delete={this.deleteTask} />
 			</div>
 		);
 	}

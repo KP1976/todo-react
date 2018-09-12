@@ -406,6 +406,7 @@ body {
   padding: 0 1rem 0 0; }
 
 .task {
+  animation: 0.3s dropDown;
   background-color: #eee;
   border-radius: 0.5rem;
   display: grid;
@@ -438,6 +439,7 @@ body {
     display: flex;
     justify-content: space-between; }
     .task .task-icons__modify-icon {
+      cursor: pointer;
       flex-direction: column;
       height: 4rem;
       position: relative;
@@ -462,6 +464,7 @@ body {
           bottom: 0;
           opacity: 0.6; }
     .task .task-icons__delete-icon {
+      cursor: pointer;
       height: 5.5rem;
       padding: 0.7rem 0;
       position: relative;
@@ -484,6 +487,13 @@ body {
           content: '';
           transform: translateY(-50%) rotate(-90deg); }
 
+@keyframes dropDown {
+  0% {
+    opacity: 0;
+    transform: translateX(-100%); }
+  100% {
+    opacity: 1;
+    transform: translateX(0); } }
 .tasks-done-list-container {
   background-color: #717171;
   border-radius: 0.5rem;
