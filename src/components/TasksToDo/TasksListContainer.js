@@ -1,13 +1,13 @@
 import React from 'react';
 import TasksList from './TasksList';
-import AddTasks from './AddTasks';
+import AddTask from './AddTask';
 import TasksDoneListContainer from '../TasksDone/TasksDoneListContainer';
 
 const TasksListContainer = props => {
 	return (
 		<div className="todo-container">
 			<div className="tasks-list-container">
-				<AddTasks />
+				<AddTask />
 				<TasksList />
 			</div>
 			<TasksDoneListContainer />

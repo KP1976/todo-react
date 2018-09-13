@@ -2,6 +2,18 @@ import React, { Component } from 'react';
 
 const Context = React.createContext();
 
+const reducer = (state, action) => {
+	switch (action.type) {
+		case 'DELETE_TASK':
+			return {
+				...state,
+				tasks: state.tasks.filter(task => task.id !== action.payload),
+			};
+		default:
+			return state;
+	}
+};
+
 export class Provider extends Component {
 	state = {
 		tasks: [
@@ -21,6 +33,8 @@ export class Provider extends Component {
 				date: '05.08.2016',
 			},
 		],
+
+		dispatch: action => this.setState(state => reducer(state, action)),
 	};
 
 	render() {

@@ -64,14 +64,6 @@ class TasksList extends Component {
 	// 	this.setState({ tasks: newTasks });
 	// };
 
-	deleteTask = id => {
-		console.log(id);
-		const { tasks } = this.state;
-		const newTasks = tasks.filter(task => task.id !== id);
-
-		this.setState({ tasks: newTasks });
-	};
-
 	render() {
 		return (
 			<Consumer>
@@ -81,11 +73,7 @@ class TasksList extends Component {
 						<ul className="tasks-list">
 							{/* Mapujemy każdy z elementów w tablicy tasks i przekazujemy propsy(task.id i task czyli cały state) do komponentu Task */}
 							{tasks.map(task => (
-								<Task
-									key={task.id}
-									task={task}
-									deleteClickHandler={this.deleteTask.bind(this, task.id)}
-								/>
+								<Task key={task.id} task={task} />
 							))}
 						</ul>
 					);

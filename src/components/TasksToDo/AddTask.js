@@ -1,12 +1,24 @@
 import React, { Component } from 'react';
 
 class AddTasks extends Component {
+	state = {
+		text: '',
+		date: '',
+	};
+
 	render() {
 		return (
 			<React.Fragment>
 				<form className="add-task">
-					<label className="add-task__label">Wpisz nazwę zadania</label>
-					<input type="text" className="add-task__input" />
+					<label htmlFor="task-text" className="add-task__label">
+						Zadanie do wykonania
+					</label>
+					<input
+						type="text"
+						className="add-task__input"
+						name="task-text"
+						placeholder="Wpisz nazwę zadania"
+					/>
 					<button type="submit" className="add-task__button">
 						dodaj
 					</button>
