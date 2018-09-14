@@ -7,9 +7,9 @@ class AddTasks extends Component {
 		date: '',
 	};
 
-	// W zależności jaki ma się atrybut name pod taki podstawiona będzie wartość z inputa
-	// pod zmienną text w state podstawiona będzie wartość wpisana w inpucie
-	// e.target.name musi być taki samy jak nazwa zmiennej (text)
+	// W zależności jaki ma się atrybut name, pod taki podstawiona będzie wartość z inputa.
+	// Pod zmienną text w state podstawiona będzie wartość wpisana w inpucie.
+	// e.target.name musi być taki sam jak nazwa zmiennej (text).
 	onChange = e => this.setState({ [e.target.name]: e.target.value });
 
 	onSubmit = (dispatch, e) => {
@@ -17,6 +17,12 @@ class AddTasks extends Component {
 
 		let { text, date } = this.state;
 
+		// Jeżeli zadanie jest puste (nie ma nazwy) to wyjdź z funkcji
+		if (text === '') {
+			return;
+		}
+
+		// Dodanie daty stworzenia zadania
 		const today = new Date();
 		let day = today.getDate();
 		let month = today.getMonth() + 1;
@@ -42,6 +48,7 @@ class AddTasks extends Component {
 
 		date = `${day}.${month}.${year} godz. ${hours}:${minutes}`;
 
+		// Stworzenie nowego zadania, gdzie id pobierane jest z aktualnej daty
 		const newTask = {
 			id: Date.now(),
 			text,
@@ -49,6 +56,9 @@ class AddTasks extends Component {
 		};
 
 		dispatch({ type: 'ADD_TASK', payload: newTask });
+
+		// Czyszczenie inputa
+		this.setState({ text: '' });
 	};
 
 	render() {
