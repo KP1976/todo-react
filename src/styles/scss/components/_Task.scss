@@ -1,5 +1,5 @@
 .task {
-	animation: 0.3s dropDown;
+	animation: 0.3s slideLeft;
 	background-color: $clr-text;
 	border-radius: $main-radius;
 	display: grid;
@@ -95,7 +95,7 @@
 	}
 }
 
-@keyframes dropDown {
+@keyframes slideLeft {
 	0% {
 		opacity: 0;
 		transform: translateX(-100%);

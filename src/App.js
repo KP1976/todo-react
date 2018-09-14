@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import TasksListContainer from './components/TasksToDo/TasksListContainer';
-import { Provider } from './context';
+import Provider from './context';
 
 class App extends Component {
 	render() {

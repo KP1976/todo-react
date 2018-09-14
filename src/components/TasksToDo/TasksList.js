@@ -80,31 +80,6 @@ class TasksList extends Component {
 				}}
 			</Consumer>
 		);
-
-		// return (
-		// 	<div className="tasks-list-container">
-		// 		<form className="add-task" onSubmit={this.addTask}>
-		// 			<label className="add-task__label">Wpisz nazwę zadania</label>
-		// 			<input
-		// 				type="text"
-		// 				className="add-task__input"
-		// 				onChange={this.onChange}
-		// 				value={value.taskName}
-		// 			/>
-		// 			<button type="submit" className="add-task__button">
-		// 				dodaj
-		// 			</button>
-		// 		</form>
-		// 		<h2 className="tasks-list-container__title">
-		// 			lista zadań{' '}
-		// 			<strong className="tasks-list-container__title--yellow">
-		// 				do zrobienia
-		// 			</strong>
-		// 		</h2>
-		// 		{/* <Task entries={value.tasks} delete={this.deleteTask} /> */}
-		// 		<Task entries={value.tasks} />
-		// 	</div>
-		// );
 	}
 }
 

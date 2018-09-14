@@ -9,31 +9,19 @@ const reducer = (state, action) => {
 				...state,
 				tasks: state.tasks.filter(task => task.id !== action.payload),
 			};
+		case 'ADD_TASK':
+			return {
+				...state,
+				tasks: [action.payload, ...state.tasks],
+			};
 		default:
 			return state;
 	}
 };
 
-export class Provider extends Component {
+class Provider extends Component {
 	state = {
-		tasks: [
-			{
-				id: 1,
-				text: 'Zrobić coś z tym Todo',
-				date: '15.04.2018',
-			},
-			{
-				id: 2,
-				text: 'Kolejny tekst do testowania',
-				date: '18.04.2014',
-			},
-			{
-				id: 3,
-				text: 'Coś tam coś tam',
-				date: '05.08.2016',
-			},
-		],
-
+		tasks: [],
 		dispatch: action => this.setState(state => reducer(state, action)),
 	};
 
@@ -45,6 +33,7 @@ export class Provider extends Component {
 		);
 	}
 }
+export default Provider;
 
 // Zamiast używać <Contex.Consumer></Contex.Consumer> będzie można użyć tylko <Consumer></Consumer>
 export const Consumer = Context.Consumer;
