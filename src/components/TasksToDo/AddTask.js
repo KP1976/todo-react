@@ -13,12 +13,15 @@ class AddTasks extends Component {
 	onChange = e => this.setState({ [e.target.name]: e.target.value });
 
 	onSubmit = (dispatch, e) => {
+		const errorDiv = document.querySelector('.error');
 		e.preventDefault();
 
 		let { text, date } = this.state;
 
 		// Jeżeli zadanie jest puste (nie ma nazwy) to wyjdź z funkcji
 		if (text === '') {
+			errorDiv.classList.add('err-visible');
+			setTimeout(() => errorDiv.classList.remove('err-visible'), 2000);
 			return;
 		}
 
@@ -69,35 +72,24 @@ class AddTasks extends Component {
 				{value => {
 					const { dispatch } = value;
 					return (
-						<React.Fragment>
-							<form
-								className="add-task"
-								onSubmit={this.onSubmit.bind(this, dispatch)}
-							>
-								<label htmlFor="text" className="add-task__label">
-									Zadanie do wykonania
-								</label>
-								<input
-									type="text"
-									className="add-task__input"
-									name="text"
-									placeholder="Wpisz nazwę zadania"
-									value={text}
-									onChange={this.onChange}
-								/>
-								<input
-									type="submit"
-									value="dodaj"
-									className="add-task__button"
-								/>
-							</form>
-							<h2 className="tasks-list-container__title">
-								lista zadań{' '}
-								<strong className="tasks-list-container__title--yellow">
-									do zrobienia
-								</strong>
-							</h2>
-						</React.Fragment>
+						<form
+							className="add-task"
+							onSubmit={this.onSubmit.bind(this, dispatch)}
+						>
+							<label htmlFor="text" className="add-task__label">
+								Zadanie do wykonania
+							</label>
+							<input
+								type="text"
+								className="add-task__input"
+								name="text"
+								placeholder="Wpisz nazwę zadania"
+								value={text}
+								onChange={this.onChange}
+							/>
+							<input type="submit" value="dodaj" className="add-task__button" />
+							<div className="error">Nie możesz dodać pustego zadania!</div>
+						</form>
 					);
 				}}
 			</Consumer>

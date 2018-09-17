@@ -6,8 +6,9 @@
 @import 'base/body';
 @import 'base/typography';
 
-@import 'components/AddTask';
+@import 'components/TodoContainer';
 @import 'components/TasksListContainer';
+@import 'components/AddTask';
 @import 'components/TasksList';
 @import 'components/Task';
 @import 'components/TasksDoneListContainer';

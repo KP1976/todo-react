@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import TasksListContainer from './components/TasksToDo/TasksListContainer';
+import TodoContainer from './components/TodoContainer';
 import Provider from './context';
 
 class App extends Component {
@@ -8,7 +8,7 @@ class App extends Component {
 			<Provider>
 				<div className="App">
 					<h1 className="title">lista zadań</h1>
-					<TasksListContainer />
+					<TodoContainer />
 				</div>
 			</Provider>
 		);
