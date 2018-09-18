@@ -26,7 +26,7 @@ const reducer = (state, action) => {
 
 class Provider extends Component {
 	state = {
-		tasks: [],
+		tasks: JSON.parse(localStorage.getItem('tasks')) || [],
 		deletedTasks: [],
 		dispatch: action => this.setState(state => reducer(state, action)),
 	};

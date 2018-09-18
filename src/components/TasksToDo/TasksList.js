@@ -8,6 +8,10 @@ class TasksList extends Component {
 			<Consumer>
 				{value => {
 					const { tasks } = value;
+
+					// Zapisujemy w LocalStorage nową tablicę z zadaniami
+					localStorage.setItem('tasks', JSON.stringify(tasks));
+
 					return (
 						<ul className="tasks-list">
 							{/* Mapujemy każdy z elementów w tablicy tasks i przekazujemy propsy(task.id i task czyli cały state) do komponentu Task */}
