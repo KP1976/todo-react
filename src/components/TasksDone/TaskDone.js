@@ -3,14 +3,15 @@ import PropTypes from 'prop-types';
 
 class TaskDone extends Component {
 	render() {
-		const { text, date } = this.props.deletedTask;
+		const { text, deleteDate } = this.props.deletedTask;
 
 		return (
 			<li className="task-done">
 				<p className="task-done__name-task">{text}</p>
 				<p className="task-done__date-task">
-					Data ukończenia:{' '}
-					<span className="task-done__date-task-value">{date}</span>
+					Data ukończenia:
+					<br />
+					<span className="task-done__date-task-value">{deleteDate}</span>
 				</p>
 			</li>
 		);

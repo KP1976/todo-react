@@ -7,6 +7,10 @@ const TasksDoneList = () => {
 		<Consumer>
 			{value => {
 				const { deletedTasks } = value;
+
+				// Zapisujemy w LocalStorage nową tablicę z zadaniami
+				localStorage.setItem('deletedTasks', JSON.stringify(deletedTasks));
+
 				return (
 					<ul className="tasks-done-list">
 						{deletedTasks.map(deletedTask => (

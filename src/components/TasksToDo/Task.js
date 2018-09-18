@@ -7,9 +7,35 @@ class Task extends Component {
 		console.log(date);
 	};
 
-	deleteTask = (id, dispatch, text, date) => {
+	deleteTask = (id, dispatch, text) => {
+		const today = new Date();
+		let day = today.getDate();
+		let month = today.getMonth() + 1;
+		let year = today.getFullYear();
+		let hours = today.getHours();
+		let minutes = today.getMinutes();
+		let seconds = today.getSeconds();
+
+		if (month < 10) {
+			month = '0' + month.toString();
+		}
+
+		if (day < 10) {
+			day = '0' + day.toString();
+		}
+
+		if (hours < 10) {
+			hours = '0' + hours.toString();
+		}
+
+		if (minutes < 10) {
+			minutes = '0' + minutes.toString();
+		}
+
+		let deleteDate = `${day}.${month}.${year} godz. ${hours}:${minutes}:${seconds}`;
+
 		dispatch({ type: 'DELETE_TASK', payload: id });
-		dispatch({ type: 'DELETED_TASK', payload: { id, text, date } });
+		dispatch({ type: 'DELETED_TASK', payload: { id, text, deleteDate } });
 	};
 
 	render() {
@@ -34,7 +60,7 @@ class Task extends Component {
 								</div>
 								<div
 									className="task-icons__delete-icon"
-									onClick={this.deleteTask.bind(this, id, dispatch, text, date)}
+									onClick={this.deleteTask.bind(this, id, dispatch, text)}
 								>
 									<div className="task-icons__delete-icon--red-cross" />
 								</div>

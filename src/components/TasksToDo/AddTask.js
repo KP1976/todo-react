@@ -32,6 +32,7 @@ class AddTasks extends Component {
 		let year = today.getFullYear();
 		let hours = today.getHours();
 		let minutes = today.getMinutes();
+		let seconds = today.getSeconds();
 
 		if (month < 10) {
 			month = '0' + month.toString();
@@ -49,7 +50,11 @@ class AddTasks extends Component {
 			minutes = '0' + minutes.toString();
 		}
 
-		date = `${day}.${month}.${year} godz. ${hours}:${minutes}`;
+		if (seconds < 10) {
+			seconds = '0' + seconds.toString();
+		}
+
+		date = `${day}.${month}.${year} godz. ${hours}:${minutes}:${seconds}`;
 
 		// Stworzenie nowego zadania, gdzie id pobierane jest z aktualnej daty
 		const newTask = {
