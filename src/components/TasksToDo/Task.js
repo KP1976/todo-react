@@ -4,11 +4,12 @@ import { Consumer } from '../../context';
 
 class Task extends Component {
 	test = (date, e) => {
-		// console.log(date);
+		console.log(date);
 	};
 
-	deleteTask = (id, dispatch) => {
+	deleteTask = (id, dispatch, text, date) => {
 		dispatch({ type: 'DELETE_TASK', payload: id });
+		dispatch({ type: 'DELETED_TASK', payload: { id, text, date } });
 	};
 
 	render() {
@@ -33,7 +34,7 @@ class Task extends Component {
 								</div>
 								<div
 									className="task-icons__delete-icon"
-									onClick={this.deleteTask.bind(this, id, dispatch)}
+									onClick={this.deleteTask.bind(this, id, dispatch, text, date)}
 								>
 									<div className="task-icons__delete-icon--red-cross" />
 								</div>

@@ -9,6 +9,11 @@ const reducer = (state, action) => {
 				...state,
 				tasks: state.tasks.filter(task => task.id !== action.payload),
 			};
+		case 'DELETED_TASK':
+			return {
+				...state,
+				deletedTasks: [action.payload, ...state.deletedTasks],
+			};
 		case 'ADD_TASK':
 			return {
 				...state,
@@ -22,6 +27,7 @@ const reducer = (state, action) => {
 class Provider extends Component {
 	state = {
 		tasks: [],
+		deletedTasks: [],
 		dispatch: action => this.setState(state => reducer(state, action)),
 	};
 

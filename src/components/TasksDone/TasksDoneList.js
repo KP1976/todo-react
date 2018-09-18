@@ -1,8 +1,22 @@
 import React from 'react';
-// import TaskDone from './TaskDone';
+import { Consumer } from '../../context';
+import TaskDone from './TaskDone';
 
 const TasksDoneList = () => {
-	return <ul className="tasks-done-list">{/* <TaskDone /> */}</ul>;
+	return (
+		<Consumer>
+			{value => {
+				const { deletedTasks } = value;
+				return (
+					<ul className="tasks-done-list">
+						{deletedTasks.map(deletedTask => (
+							<TaskDone key={deletedTask.id} deletedTask={deletedTask} />
+						))}
+					</ul>
+				);
+			}}
+		</Consumer>
+	);
 };
 
 export default TasksDoneList;
