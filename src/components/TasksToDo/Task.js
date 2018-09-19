@@ -1,38 +1,12 @@
 import React, { Component } from 'react';
 import PropTypes from 'prop-types';
 import { Consumer } from '../../context';
+import getDate from '../../getDate';
 
 class Task extends Component {
-	test = (date, e) => {
-		console.log(date);
-	};
-
 	deleteTask = (id, dispatch, text) => {
-		const today = new Date();
-		let day = today.getDate();
-		let month = today.getMonth() + 1;
-		let year = today.getFullYear();
-		let hours = today.getHours();
-		let minutes = today.getMinutes();
-		let seconds = today.getSeconds();
-
-		if (month < 10) {
-			month = '0' + month.toString();
-		}
-
-		if (day < 10) {
-			day = '0' + day.toString();
-		}
-
-		if (hours < 10) {
-			hours = '0' + hours.toString();
-		}
-
-		if (minutes < 10) {
-			minutes = '0' + minutes.toString();
-		}
-
-		let deleteDate = `${day}.${month}.${year} godz. ${hours}:${minutes}:${seconds}`;
+		// Dodanie daty ukończenia zadania
+		let deleteDate = getDate();
 
 		dispatch({ type: 'DELETE_TASK', payload: id });
 		dispatch({ type: 'DELETED_TASK', payload: { id, text, deleteDate } });
@@ -46,7 +20,7 @@ class Task extends Component {
 				{value => {
 					const { dispatch } = value;
 					return (
-						<li className="task" onClick={this.test.bind(this, date)}>
+						<li className="task">
 							<div className="task-texts">
 								<p className="task-texts__name-task">{text}</p>
 								<p className="task-texts__date-task">

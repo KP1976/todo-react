@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Consumer } from '../../context';
+import getDate from '../../getDate';
 
 class AddTasks extends Component {
 	state = {
@@ -26,35 +27,7 @@ class AddTasks extends Component {
 		}
 
 		// Dodanie daty stworzenia zadania
-		const today = new Date();
-		let day = today.getDate();
-		let month = today.getMonth() + 1;
-		let year = today.getFullYear();
-		let hours = today.getHours();
-		let minutes = today.getMinutes();
-		let seconds = today.getSeconds();
-
-		if (month < 10) {
-			month = '0' + month.toString();
-		}
-
-		if (day < 10) {
-			day = '0' + day.toString();
-		}
-
-		if (hours < 10) {
-			hours = '0' + hours.toString();
-		}
-
-		if (minutes < 10) {
-			minutes = '0' + minutes.toString();
-		}
-
-		if (seconds < 10) {
-			seconds = '0' + seconds.toString();
-		}
-
-		date = `${day}.${month}.${year} godz. ${hours}:${minutes}:${seconds}`;
+		date = getDate();
 
 		// Stworzenie nowego zadania, gdzie id pobierane jest z aktualnej daty
 		const newTask = {
