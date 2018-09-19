@@ -1,4 +1,5 @@
 .task-done {
+	animation: 0.5s popUp;
 	background-color: $clr-taskdone-background;
 	border-radius: $main-radius;
 	display: flex;
@@ -38,5 +39,26 @@
 			font-size: 1.5rem;
 			font-weight: $font-bold;
 		}
+	}
+}
+
+@keyframes popUp {
+	0% {
+		opacity: 0;
+		height: 0;
+	}
+
+	33% {
+		opacity: 0;
+		height: 2.5rem;
+	}
+	66% {
+		opacity: 0.5;
+		height: 5rem;
+	}
+
+	100% {
+		opacity: 1;
+		height: 7.6rem;
 	}
 }
