@@ -6,11 +6,19 @@
 	grid-row: 1 / 2;
 	grid-template-columns: 45rem 9rem;
 
+	@include mq(1366px) {
+		grid-template-columns: 39.6rem 9rem;
+	}
+
 	&__label {
 		font-size: 1.8rem;
 		font-weight: $font-normal;
 		grid-column: 1 / 2;
 		grid-row: 1 / 2;
+
+		@include mq(1366px) {
+			font-size: 1.6rem;
+		}
 	}
 
 	&__input {
@@ -25,6 +33,11 @@
 		height: 5rem;
 		outline-color: $blue;
 		padding: 1rem 2rem;
+
+		@include mq(1366px) {
+			font-size: 1.8rem;
+			height: 4rem;
+		}
 	}
 
 	&__button {
@@ -39,6 +52,11 @@
 		height: 5rem;
 		text-transform: uppercase;
 		transition: background-color 0.3s ease-in-out;
+
+		@include mq(1366px) {
+			font-size: 1.6rem;
+			height: 4rem;
+		}
 
 		&:hover {
 			background-color: darken($blue, 15%);

@@ -7,4 +7,8 @@
 	grid-template-rows: min-content min-content auto;
 	height: 56rem;
 	padding: 2rem;
+
+	@include mq(1366px) {
+		height: 52rem;
+	}
 }

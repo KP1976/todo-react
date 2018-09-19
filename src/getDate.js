@@ -23,6 +23,10 @@ const getDate = () => {
 		minutes = '0' + minutes.toString();
 	}
 
+	if (seconds < 10) {
+		seconds = '0' + seconds.toString();
+	}
+
 	let date = `${day}.${month}.${year} godz. ${hours}:${minutes}:${seconds}`;
 	return date;
 };

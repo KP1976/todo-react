@@ -9,4 +9,11 @@
 	margin: 0 auto;
 	padding: 7rem 10rem;
 	width: 119rem;
+
+	@include mq(1366px) {
+		grid-template-columns: 53.6rem 35.2rem;
+		height: 60rem;
+		padding: 4rem 9.2rem;
+		width: 108.8rem;
+	}
 }

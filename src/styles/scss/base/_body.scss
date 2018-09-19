@@ -1,7 +1,8 @@
 body {
 	background-color: $clr-body-background;
+	max-height: 100vh;
 	margin: 0;
-	padding: 0;
+	padding: 0 0 2rem 0;
 }
 
 .title {
@@ -10,4 +11,8 @@ body {
 	margin-bottom: 2rem;
 	text-align: center;
 	text-transform: uppercase;
+
+	@include mq(1366px) {
+		font-size: 4rem;
+	}
 }
