@@ -2,18 +2,29 @@
 	background-color: $clr-todo-background;
 	border-radius: $main-radius;
 	display: grid;
-	grid-column-gap: 1rem;
-	grid-row-gap: 2rem;
-	grid-template-columns: 59rem 39em;
+	grid-column-gap: 2.4rem;
+	grid-template-columns: 55.8rem 36.4rem;
 	height: 70rem;
 	margin: 0 auto;
-	padding: 7rem 10rem;
-	width: 119rem;
+	padding: 7rem 9.7rem;
+	width: 114rem;
 
-	@include mq(1366px) {
-		grid-template-columns: 53.6rem 35.2rem;
-		height: 60rem;
-		padding: 4rem 9.2rem;
-		width: 108.8rem;
+	@include mq(1200px) {
+		grid-template-columns: 46.4rem 30rem;
+		height: 66rem;
+		padding: 5rem 8.2rem;
+		width: 95.6rem;
+	}
+
+	@include mq(992px) {
+		grid-template-columns: 100%;
+		height: auto;
+		padding: 2rem;
+		width: 69rem;
+	}
+
+	@include mq(768px) {
+		padding: 2rem 3.3rem;
+		width: 61.6rem;
 	}
 }

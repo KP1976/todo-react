@@ -9,8 +9,7 @@ class TaskDone extends Component {
 			<li className="task-done">
 				<p className="task-done__name-task">{text}</p>
 				<p className="task-done__date-task">
-					Data ukończenia:
-					<br />
+					Data ukończenia: <br />
 					<span className="task-done__date-task-value">{deleteDate}</span>
 				</p>
 			</li>

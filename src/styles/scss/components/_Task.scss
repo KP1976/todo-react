@@ -3,16 +3,18 @@
 	background-color: $clr-text;
 	border-radius: $main-radius;
 	display: grid;
+	grid-column-gap: 1rem;
 	grid-template-columns: auto 6.2rem;
-	grid-template-rows: 5rem;
-	height: 6rem;
 	list-style: none;
 	margin-bottom: 2rem;
 	padding: 0.5rem 2rem;
 
-	@include mq(1366px) {
-		grid-template-rows: 4.5rem;
-		height: 5.5rem;
+	@include mq(1200px) {
+		font-size: 4rem;
+	}
+
+	@include mq(992px) {
+		min-height: 6rem;
 	}
 
 	&:last-child {
@@ -23,20 +25,19 @@
 		display: flex;
 		flex-direction: column;
 		justify-content: space-between;
-		height: 5rem;
-
-		@include mq(1366px) {
-			height: 4.5rem;
-		}
 
 		&__name-task {
 			color: $clr-body-background;
 			font-size: 1.8rem;
 			line-height: 2.4rem;
-			margin: 0;
+			margin: 0 0 0.5rem 0;
 
-			@include mq(1366px) {
+			@include mq(1200px) {
 				font-size: 1.6rem;
+			}
+
+			@include mq(992px) {
+				font-size: 1.8rem;
 			}
 		}
 
@@ -49,6 +50,18 @@
 				color: $clr-todo-background;
 				font-size: 1.6rem;
 				font-weight: $font-bold;
+			}
+		}
+
+		br {
+			display: none;
+
+			@include mq(1200px) {
+				display: block;
+			}
+
+			@include mq(992px) {
+				display: none;
 			}
 		}
 	}
@@ -91,7 +104,6 @@
 
 		&__delete-icon {
 			cursor: pointer;
-			height: 5.5rem;
 			padding: 0.7rem 0;
 			position: relative;
 			width: 4.5rem;

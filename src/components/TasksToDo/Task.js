@@ -24,7 +24,7 @@ class Task extends Component {
 							<div className="task-texts">
 								<p className="task-texts__name-task">{text}</p>
 								<p className="task-texts__date-task">
-									Data wstawienia:{' '}
+									Data wstawienia: <br />
 									<span className="task-texts__date-task-value">{date}</span>
 								</p>
 							</div>

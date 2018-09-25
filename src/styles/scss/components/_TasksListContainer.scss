@@ -8,7 +8,11 @@
 	height: 56rem;
 	padding: 2rem;
 
-	@include mq(1366px) {
-		height: 52rem;
+	@include mq(992px) {
+		display: flex;
+		flex-direction: column;
+		height: 60rem;
+		margin-bottom: 2rem;
+		width: 100%;
 	}
 }

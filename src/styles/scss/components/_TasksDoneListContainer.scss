@@ -1,12 +1,37 @@
 .tasks-done-list-container {
 	background-color: $clr-lists-background;
 	border-radius: $main-radius;
+	display: grid;
 	grid-column: 2 / 3;
 	grid-row: 1 / 2;
+	grid-template-rows: min-content auto;
+	height: 56rem;
 	padding: 2rem;
 
 	.tasks-list__title {
-		margin-bottom: 2.3rem;
-		letter-spacing: -0.03rem;
+		font-size: 2.4rem;
+		grid-row: 1 / 2;
+		margin-bottom: 2rem;
+
+		@include mq(992px) {
+			font-size: 2.8rem;
+			margin: 0 0 2rem 0;
+		}
+
+		&--yellow {
+			font-size: 2.4rem;
+
+			@include mq(992px) {
+				font-size: 2.8rem;
+			}
+		}
+	}
+
+	@include mq(992px) {
+		display: flex;
+		flex-direction: column;
+		grid-column: 1;
+		grid-row: 2 / 3;
+		height: 47.2rem;
 	}
 }

@@ -4,12 +4,15 @@
 	border-radius: $main-radius;
 	display: flex;
 	flex-direction: column;
-	min-height: 7.6rem;
 	justify-content: space-between;
 	list-style: none;
 	margin-bottom: 2rem;
 	padding: 0.5rem 2rem;
 	position: relative;
+
+	@include mq(992px) {
+		min-height: 5.9rem;
+	}
 
 	&:last-child {
 		margin-bottom: 0;
@@ -23,9 +26,13 @@
 	&__name-task {
 		color: $clr-body-background;
 		font-size: 1.6rem;
-		margin: 0;
+		margin: 0 0 0.5rem 0;
 		line-height: 2.1rem;
 		text-align: center;
+
+		@include mq(992px) {
+			font-size: 1.8rem;
+		}
 	}
 
 	&__date-task {
@@ -38,6 +45,12 @@
 			color: $clr-body-background;
 			font-size: 1.5rem;
 			font-weight: $font-bold;
+		}
+	}
+
+	br {
+		@include mq(992px) {
+			display: none;
 		}
 	}
 }
