@@ -5,6 +5,12 @@ body {
 	padding: 0 0 2rem 0;
 }
 
+.App {
+	@include mq(992px) {
+		padding-bottom: 5rem;
+	}
+}
+
 .title {
 	font-size: 5rem;
 	font-weight: $font-bold;

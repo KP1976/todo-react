@@ -17,6 +17,11 @@
 		grid-template-rows: auto 5rem;
 	}
 
+	@include mq(768px) {
+		grid-template-columns: 51rem;
+		grid-template-rows: auto 5rem 6rem;
+	}
+
 	&__label {
 		font-size: 1.8rem;
 		font-weight: $font-normal;
@@ -26,6 +31,10 @@
 
 		@include mq(1200px) {
 			font-size: 1.6rem;
+		}
+
+		@include mq(992px) {
+			font-size: 1.8rem;
 		}
 	}
 
@@ -49,6 +58,7 @@
 		}
 
 		@include mq(992px) {
+			font-size: 1.8rem;
 			height: 5rem;
 		}
 	}
@@ -77,6 +87,12 @@
 			grid-column: 2 / 3;
 			grid-row: 2 / 3;
 			height: 5rem;
+		}
+
+		@include mq(768px) {
+			grid-column: 1;
+			grid-row: 3 / 4;
+			margin-top: 1rem;
 		}
 
 		&:hover {

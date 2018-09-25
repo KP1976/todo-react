@@ -34,4 +34,8 @@
 		grid-row: 2 / 3;
 		height: 47.2rem;
 	}
+
+	@include mq(768px) {
+		height: 45.8rem;
+	}
 }
