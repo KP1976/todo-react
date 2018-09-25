@@ -24,7 +24,10 @@
 	}
 
 	@include mq(768px) {
-		padding: 2rem 3.3rem;
-		width: 61.6rem;
+		width: 51rem;
+	}
+
+	@include mq(576px) {
+		width: 100%;
 	}
 }

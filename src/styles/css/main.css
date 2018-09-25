@@ -361,8 +361,10 @@ body {
       width: 69rem; } }
   @media (max-width: 768px) {
     .todo-container {
-      padding: 2rem 3.3rem;
-      width: 61.6rem; } }
+      width: 51rem; } }
+  @media (max-width: 576px) {
+    .todo-container {
+      width: 100%; } }
 
 .tasks-list-container {
   background-color: #717171;
@@ -382,7 +384,7 @@ body {
       width: 100%; } }
   @media (max-width: 768px) {
     .tasks-list-container {
-      height: 66rem; } }
+      height: 62.6rem; } }
 
 .add-task {
   display: grid;
@@ -402,8 +404,8 @@ body {
       grid-template-rows: auto 5rem; } }
   @media (max-width: 768px) {
     .add-task {
-      grid-template-columns: 51rem;
-      grid-template-rows: auto 5rem 6rem; } }
+      grid-template-columns: 43rem;
+      grid-template-rows: auto 4rem 5rem; } }
   .add-task__label {
     font-size: 1.8rem;
     font-weight: 400;
@@ -416,6 +418,9 @@ body {
     @media (max-width: 992px) {
       .add-task__label {
         font-size: 1.8rem; } }
+    @media (max-width: 768px) {
+      .add-task__label {
+        font-size: 1.6rem; } }
   .add-task__input {
     background-color: #eee;
     border: none;
@@ -437,6 +442,10 @@ body {
       .add-task__input {
         font-size: 1.8rem;
         height: 5rem; } }
+    @media (max-width: 768px) {
+      .add-task__input {
+        font-size: 1.6rem;
+        height: 4rem; } }
   .add-task__button {
     background-color: #036ffc;
     border: none;
@@ -464,6 +473,7 @@ body {
       .add-task__button {
         grid-column: 1;
         grid-row: 3 / 4;
+        height: 4rem;
         margin-top: 1rem; } }
     .add-task__button:hover {
       background-color: #024eb0; }
@@ -539,6 +549,9 @@ body {
       @media (max-width: 992px) {
         .task .task-texts__name-task {
           font-size: 1.8rem; } }
+      @media (max-width: 768px) {
+        .task .task-texts__name-task {
+          font-size: 1.6rem; } }
     .task .task-texts__date-task {
       color: #888;
       font-size: 1.6rem;
@@ -555,6 +568,9 @@ body {
       @media (max-width: 992px) {
         .task .task-texts br {
           display: none; } }
+      @media (max-width: 768px) {
+        .task .task-texts br {
+          display: block; } }
   .task .task-icons {
     align-items: center;
     display: flex;
@@ -645,7 +661,7 @@ body {
       height: 47.2rem; } }
   @media (max-width: 768px) {
     .tasks-done-list-container {
-      height: 45.8rem; } }
+      height: 45.7rem; } }
 
 .tasks-done-list {
   margin: 0;
@@ -683,6 +699,9 @@ body {
     @media (max-width: 992px) {
       .task-done__name-task {
         font-size: 1.8rem; } }
+    @media (max-width: 768px) {
+      .task-done__name-task {
+        font-size: 1.6rem; } }
   .task-done__date-task {
     color: #222;
     font-size: 1.5rem;

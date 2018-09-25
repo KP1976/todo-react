@@ -18,8 +18,8 @@
 	}
 
 	@include mq(768px) {
-		grid-template-columns: 51rem;
-		grid-template-rows: auto 5rem 6rem;
+		grid-template-columns: 43rem;
+		grid-template-rows: auto 4rem 5rem;
 	}
 
 	&__label {
@@ -35,6 +35,10 @@
 
 		@include mq(992px) {
 			font-size: 1.8rem;
+		}
+
+		@include mq(768px) {
+			font-size: 1.6rem;
 		}
 	}
 
@@ -60,6 +64,11 @@
 		@include mq(992px) {
 			font-size: 1.8rem;
 			height: 5rem;
+		}
+
+		@include mq(768px) {
+			font-size: 1.6rem;
+			height: 4rem;
 		}
 	}
 
@@ -92,6 +101,7 @@
 		@include mq(768px) {
 			grid-column: 1;
 			grid-row: 3 / 4;
+			height: 4rem;
 			margin-top: 1rem;
 		}
 
