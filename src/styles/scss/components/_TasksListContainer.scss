@@ -19,4 +19,9 @@
 	@include mq(768px) {
 		height: 62.6rem;
 	}
+
+	@include mq(576px) {
+		height: 50.8rem;
+		padding: 1rem 1rem 2rem;
+	}
 }

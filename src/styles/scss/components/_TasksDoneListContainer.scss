@@ -18,11 +18,19 @@
 			margin: 0 0 2rem 0;
 		}
 
+		@include mq(576px) {
+			font-size: 2rem;
+		}
+
 		&--yellow {
 			font-size: 2.4rem;
 
 			@include mq(992px) {
 				font-size: 2.8rem;
+			}
+
+			@include mq(576px) {
+				font-size: 2rem;
 			}
 		}
 	}
@@ -37,5 +45,10 @@
 
 	@include mq(768px) {
 		height: 45.7rem;
+	}
+
+	@include mq(576px) {
+		height: 41.7rem;
+		padding: 2rem 1rem;
 	}
 }

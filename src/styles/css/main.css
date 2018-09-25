@@ -326,6 +326,9 @@ body {
 @media (max-width: 992px) {
   .App {
     padding-bottom: 5rem; } }
+@media (max-width: 576px) {
+  .App {
+    padding: 0 1.5rem 5rem; } }
 
 .title {
   font-size: 5rem;
@@ -364,6 +367,8 @@ body {
       width: 51rem; } }
   @media (max-width: 576px) {
     .todo-container {
+      background-color: transparent;
+      padding: 0;
       width: 100%; } }
 
 .tasks-list-container {
@@ -385,6 +390,10 @@ body {
   @media (max-width: 768px) {
     .tasks-list-container {
       height: 62.6rem; } }
+  @media (max-width: 576px) {
+    .tasks-list-container {
+      height: 50.8rem;
+      padding: 1rem 1rem 2rem; } }
 
 .add-task {
   display: grid;
@@ -405,6 +414,10 @@ body {
   @media (max-width: 768px) {
     .add-task {
       grid-template-columns: 43rem;
+      grid-template-rows: auto 4rem 5rem; } }
+  @media (max-width: 576px) {
+    .add-task {
+      grid-template-columns: auto;
       grid-template-rows: auto 4rem 5rem; } }
   .add-task__label {
     font-size: 1.8rem;
@@ -445,7 +458,11 @@ body {
     @media (max-width: 768px) {
       .add-task__input {
         font-size: 1.6rem;
-        height: 4rem; } }
+        height: 4rem;
+        padding: 1rem; } }
+    @media (max-width: 576px) {
+      .add-task__input {
+        width: 100%; } }
   .add-task__button {
     background-color: #036ffc;
     border: none;
@@ -475,6 +492,9 @@ body {
         grid-row: 3 / 4;
         height: 4rem;
         margin-top: 1rem; } }
+    @media (max-width: 576px) {
+      .add-task__button {
+        font-size: 1.6rem; } }
     .add-task__button:hover {
       background-color: #024eb0; }
 
@@ -512,9 +532,15 @@ body {
     @media (max-width: 992px) {
       .tasks-list__title {
         margin: 2rem 0; } }
+    @media (max-width: 576px) {
+      .tasks-list__title {
+        font-size: 2rem; } }
     .tasks-list__title--yellow {
       color: #ebbf2d;
       font-size: 2.8rem; }
+      @media (max-width: 576px) {
+        .tasks-list__title--yellow {
+          font-size: 2rem; } }
 
 .task {
   animation: 0.3s slideLeft;
@@ -522,7 +548,7 @@ body {
   border-radius: 0.5rem;
   display: grid;
   grid-column-gap: 1rem;
-  grid-template-columns: auto 6.2rem;
+  grid-template-columns: auto min-content;
   list-style: none;
   margin-bottom: 2rem;
   padding: 0.5rem 2rem; }
@@ -532,6 +558,10 @@ body {
   @media (max-width: 992px) {
     .task {
       min-height: 6rem; } }
+  @media (max-width: 576px) {
+    .task {
+      grid-template-columns: auto 4rem;
+      padding: 0.5rem 1rem; } }
   .task:last-child {
     margin-bottom: 0; }
   .task .task-texts {
@@ -575,17 +605,34 @@ body {
     align-items: center;
     display: flex;
     justify-content: space-between; }
+    @media (max-width: 576px) {
+      .task .task-icons {
+        flex-direction: column-reverse;
+        justify-content: center; } }
     .task .task-icons__modify-icon {
       cursor: pointer;
       flex-direction: column;
       height: 4rem;
+      margin-right: 1rem;
       position: relative;
       width: 1rem; }
+      @media (max-width: 576px) {
+        .task .task-icons__modify-icon {
+          flex-direction: row;
+          height: 0.7rem;
+          margin-right: 0;
+          width: 3.1rem; } }
       .task .task-icons__modify-icon--yellow-circle {
         background-color: #ebbf2d;
         border-radius: 50%;
         height: 1rem;
         margin-bottom: 0.5rem; }
+        @media (max-width: 576px) {
+          .task .task-icons__modify-icon--yellow-circle {
+            height: 0.7rem;
+            margin-bottom: 0;
+            margin-right: 0.5rem;
+            width: 0.7rem; } }
         .task .task-icons__modify-icon--yellow-circle::before, .task .task-icons__modify-icon--yellow-circle::after {
           background-color: #ebbf2d;
           border-radius: 50%;
@@ -593,18 +640,39 @@ body {
           height: 1rem;
           position: absolute;
           width: 100%; }
+          @media (max-width: 576px) {
+            .task .task-icons__modify-icon--yellow-circle::before, .task .task-icons__modify-icon--yellow-circle::after {
+              background-color: #ebbf2d;
+              border-radius: 50%;
+              content: '';
+              height: 0.7rem;
+              position: absolute;
+              width: 100%;
+              width: 0.7rem; } }
         .task .task-icons__modify-icon--yellow-circle::before {
           opacity: 0.8;
           top: 50%;
           transform: translateY(-50%); }
+          @media (max-width: 576px) {
+            .task .task-icons__modify-icon--yellow-circle::before {
+              top: 0;
+              transform: translateX(12px); } }
         .task .task-icons__modify-icon--yellow-circle::after {
           bottom: 0;
           opacity: 0.6; }
+          @media (max-width: 576px) {
+            .task .task-icons__modify-icon--yellow-circle::after {
+              top: 0;
+              transform: translateX(24px); } }
     .task .task-icons__delete-icon {
       cursor: pointer;
+      height: 4.5rem;
       padding: 0.7rem 0;
       position: relative;
       width: 4.5rem; }
+      @media (max-width: 576px) {
+        .task .task-icons__delete-icon {
+          width: 100%; } }
       .task .task-icons__delete-icon--red-cross {
         background-color: #a40000;
         border-radius: 0.5rem;
@@ -613,6 +681,14 @@ body {
         top: 50%;
         width: 5rem;
         transform: translateY(-50%) rotate(45deg); }
+        @media (max-width: 576px) {
+          .task .task-icons__delete-icon--red-cross {
+            background-color: #a40000;
+            border-radius: 0.5rem;
+            height: 0.5rem;
+            position: absolute;
+            top: 50%;
+            width: 4rem; } }
         .task .task-icons__delete-icon--red-cross::before {
           background-color: #a40000;
           border-radius: 0.5rem;
@@ -622,6 +698,14 @@ body {
           width: 5rem;
           content: '';
           transform: translateY(-50%) rotate(-90deg); }
+          @media (max-width: 576px) {
+            .task .task-icons__delete-icon--red-cross::before {
+              background-color: #a40000;
+              border-radius: 0.5rem;
+              height: 0.5rem;
+              position: absolute;
+              top: 50%;
+              width: 4rem; } }
 
 @keyframes slideLeft {
   0% {
@@ -647,11 +731,17 @@ body {
       .tasks-done-list-container .tasks-list__title {
         font-size: 2.8rem;
         margin: 0 0 2rem 0; } }
+    @media (max-width: 576px) {
+      .tasks-done-list-container .tasks-list__title {
+        font-size: 2rem; } }
     .tasks-done-list-container .tasks-list__title--yellow {
       font-size: 2.4rem; }
       @media (max-width: 992px) {
         .tasks-done-list-container .tasks-list__title--yellow {
           font-size: 2.8rem; } }
+      @media (max-width: 576px) {
+        .tasks-done-list-container .tasks-list__title--yellow {
+          font-size: 2rem; } }
   @media (max-width: 992px) {
     .tasks-done-list-container {
       display: flex;
@@ -662,6 +752,10 @@ body {
   @media (max-width: 768px) {
     .tasks-done-list-container {
       height: 45.7rem; } }
+  @media (max-width: 576px) {
+    .tasks-done-list-container {
+      height: 41.7rem;
+      padding: 2rem 1rem; } }
 
 .tasks-done-list {
   margin: 0;
@@ -714,6 +808,9 @@ body {
   @media (max-width: 992px) {
     .task-done br {
       display: none; } }
+  @media (max-width: 576px) {
+    .task-done br {
+      display: block; } }
 
 @keyframes popUp {
   0% {

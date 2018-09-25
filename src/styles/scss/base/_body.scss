@@ -9,6 +9,10 @@ body {
 	@include mq(992px) {
 		padding-bottom: 5rem;
 	}
+
+	@include mq(576px) {
+		padding: 0 1.5rem 5rem;
+	}
 }
 
 .title {

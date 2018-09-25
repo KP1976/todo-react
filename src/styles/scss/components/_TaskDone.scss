@@ -60,6 +60,10 @@
 		@include mq(992px) {
 			display: none;
 		}
+
+		@include mq(576px) {
+			display: block;
+		}
 	}
 }
 

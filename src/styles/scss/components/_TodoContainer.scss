@@ -28,6 +28,8 @@
 	}
 
 	@include mq(576px) {
+		background-color: transparent;
+		padding: 0;
 		width: 100%;
 	}
 }
