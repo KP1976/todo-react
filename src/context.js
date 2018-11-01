@@ -19,6 +19,17 @@ const reducer = (state, action) => {
 				...state,
 				tasks: [action.payload, ...state.tasks],
 			};
+		case 'MODIFY_TASK':
+			return {
+				...state,
+				tasks: state.tasks.filter(task => {
+					if (task.id === action.payload.id) {
+						task.text = action.payload.text;
+						task.date = action.payload.modifiedDate;
+					}
+					return state;
+				}),
+			};
 		default:
 			return state;
 	}

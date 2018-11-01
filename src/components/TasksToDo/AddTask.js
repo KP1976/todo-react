@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Consumer } from '../../context';
 import getDate from '../../getDate';
 
-class AddTasks extends Component {
+class AddTask extends Component {
 	state = {
 		text: '',
 		date: '',
@@ -74,4 +74,4 @@ class AddTasks extends Component {
 		);
 	}
 }
-export default AddTasks;
+export default AddTask;

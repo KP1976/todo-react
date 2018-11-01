@@ -12,6 +12,14 @@ class Task extends Component {
 		dispatch({ type: 'DELETED_TASK', payload: { id, text, deleteDate } });
 	};
 
+	modifyTask = (id, dispatch, text) => {
+		console.log(id, text, dispatch);
+		let modifiedDate = getDate();
+
+		text = 'test';
+		dispatch({ type: 'MODIFY_TASK', payload: { id, text, modifiedDate } });
+	};
+
 	render() {
 		const { id, text, date } = this.props.task;
 
@@ -30,7 +38,10 @@ class Task extends Component {
 							</div>
 							<div className="task-icons">
 								<div className="task-icons__modify-icon">
-									<div className="task-icons__modify-icon--yellow-circle" />
+									<div
+										className="task-icons__modify-icon--yellow-circle"
+										onClick={this.modifyTask.bind(this, id, dispatch, text)}
+									/>
 								</div>
 								<div
 									className="task-icons__delete-icon"
