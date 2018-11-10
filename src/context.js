@@ -40,6 +40,13 @@ class Provider extends Component {
 		tasks: JSON.parse(localStorage.getItem('tasks')) || [],
 		deletedTasks: JSON.parse(localStorage.getItem('deletedTasks')) || [],
 		dispatch: action => this.setState(state => reducer(state, action)),
+		show: false,
+		showModal: () => {
+			this.setState({ show: true });
+		},
+		hideModal: () => {
+			this.setState({ show: false });
+		},
 	};
 
 	render() {

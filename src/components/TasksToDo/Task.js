@@ -12,9 +12,10 @@ class Task extends Component {
 		dispatch({ type: 'DELETED_TASK', payload: { id, text, deleteDate } });
 	};
 
-	modifyTask = (id, dispatch, text) => {
-		console.log(id, text, dispatch);
+	modifyTask = (id, dispatch, text, showModal) => {
 		let modifiedDate = getDate();
+
+		showModal();
 
 		text = 'test';
 		dispatch({ type: 'MODIFY_TASK', payload: { id, text, modifiedDate } });
@@ -26,7 +27,7 @@ class Task extends Component {
 		return (
 			<Consumer>
 				{value => {
-					const { dispatch } = value;
+					const { dispatch, showModal } = value;
 					return (
 						<li className="task">
 							<div className="task-texts">
@@ -37,11 +38,17 @@ class Task extends Component {
 								</p>
 							</div>
 							<div className="task-icons">
-								<div className="task-icons__modify-icon">
-									<div
-										className="task-icons__modify-icon--yellow-circle"
-										onClick={this.modifyTask.bind(this, id, dispatch, text)}
-									/>
+								<div
+									className="task-icons__modify-icon"
+									onClick={this.modifyTask.bind(
+										this,
+										id,
+										dispatch,
+										text,
+										showModal,
+									)}
+								>
+									<div className="task-icons__modify-icon--yellow-circle" />
 								</div>
 								<div
 									className="task-icons__delete-icon"

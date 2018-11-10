@@ -11,9 +11,9 @@
 		text-align: center;
 		text-transform: uppercase;
 
-		@include mq(992px) {
-			margin: 2rem 0;
-		}
+		// @include mq(992px) {
+		// 	margin: 2rem 0;
+		// }
 
 		@include mq(576px) {
 			font-size: 2rem;

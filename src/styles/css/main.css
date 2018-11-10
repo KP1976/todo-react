@@ -340,6 +340,73 @@ body {
     .title {
       font-size: 4rem; } }
 
+.modal {
+  background: rgba(0, 0, 0, 0.8);
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1; }
+
+.modal-main {
+  background: #eee;
+  border-radius: 0.5rem;
+  left: 50%;
+  padding: 2rem;
+  position: fixed;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 60rem;
+  min-width: 30rem;
+  width: calc(100% - 3rem); }
+  .modal-main .add-task {
+    display: flex;
+    flex-direction: column; }
+  .modal-main .add-task__label {
+    color: #717171; }
+  .modal-main .add-task__input {
+    background-color: #eee;
+    border: 1px solid #717171;
+    margin-bottom: 1rem; }
+    @media (max-width: 1200px) {
+      .modal-main .add-task__input {
+        margin-bottom: 1rem; } }
+    @media (max-width: 992px) {
+      .modal-main .add-task__input {
+        margin-bottom: 1rem; } }
+    @media (max-width: 768px) {
+      .modal-main .add-task__input {
+        margin-bottom: 0; } }
+    @media (max-width: 576px) {
+      .modal-main .add-task__input {
+        margin-bottom: 0; } }
+
+.close-modal {
+  cursor: pointer;
+  height: 1.5rem;
+  position: absolute;
+  right: 1rem;
+  top: 1.5rem;
+  width: 1.5rem; }
+  .close-modal__cross {
+    background-color: #717171;
+    height: 0.5rem;
+    transform: rotate(45deg); }
+    .close-modal__cross::after {
+      background-color: #717171;
+      content: '';
+      height: 0.5rem;
+      position: absolute;
+      transform: rotate(-90deg);
+      width: 100%; }
+
+.display-block {
+  display: block; }
+
+.display-none {
+  display: none; }
+
 .todo-container {
   background-color: #888;
   border-radius: 0.5rem;
@@ -382,8 +449,6 @@ body {
   padding: 2rem; }
   @media (max-width: 992px) {
     .tasks-list-container {
-      display: flex;
-      flex-direction: column;
       height: 60rem;
       margin-bottom: 2rem;
       width: 100%; } }
@@ -424,7 +489,7 @@ body {
     font-weight: 400;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
-    margin-bottom: 0.5rem; }
+    margin-bottom: 1rem; }
     @media (max-width: 1200px) {
       .add-task__label {
         font-size: 1.6rem; } }
@@ -529,9 +594,6 @@ body {
     margin: 0;
     text-align: center;
     text-transform: uppercase; }
-    @media (max-width: 992px) {
-      .tasks-list__title {
-        margin: 2rem 0; } }
     @media (max-width: 576px) {
       .tasks-list__title {
         font-size: 2rem; } }

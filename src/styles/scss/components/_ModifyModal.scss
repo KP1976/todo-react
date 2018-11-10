@@ -1,0 +1,83 @@
+.modal {
+	background: rgba(0, 0, 0, 0.8);
+	height: 100%;
+	left: 0;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: 1;
+}
+
+.modal-main {
+	background: $clr-text;
+	border-radius: $main-radius;
+	left: 50%;
+	padding: 2rem;
+	position: fixed;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	max-width: 60rem;
+	min-width: 30rem;
+	width: calc(100% - 3rem);
+
+	.add-task {
+		display: flex;
+		flex-direction: column;
+	}
+	.add-task__label {
+		color: $clr-lists-background;
+	}
+	.add-task__input {
+		background-color: $clr-text;
+		border: 1px solid $clr-lists-background;
+		margin-bottom: 1rem;
+
+		@include mq(1200px) {
+			margin-bottom: 1rem;
+		}
+
+		@include mq(992px) {
+			margin-bottom: 1rem;
+		}
+
+		@include mq(768px) {
+			margin-bottom: 0;
+		}
+
+		@include mq(576px) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.close-modal {
+	cursor: pointer;
+	height: 1.5rem;
+	position: absolute;
+	right: 1rem;
+	top: 1.5rem;
+	width: 1.5rem;
+
+	&__cross {
+		background-color: $clr-lists-background;
+		height: 0.5rem;
+		transform: rotate(45deg);
+
+		&::after {
+			background-color: $clr-lists-background;
+			content: '';
+			height: 0.5rem;
+			position: absolute;
+			transform: rotate(-90deg);
+			width: 100%;
+		}
+	}
+}
+
+.display-block {
+	display: block;
+}
+
+.display-none {
+	display: none;
+}
