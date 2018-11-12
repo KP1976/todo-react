@@ -4,9 +4,9 @@
 	"homepage": "https://KP1976.github.io/todo-react/",
 	"dependencies": {
 		"gh-pages": "^1.2.0",
-		"react": "^16.6.0",
-		"react-dom": "^16.6.0",
-		"react-scripts": "2.0.4"
+		"react": "^16.4.2",
+		"react-dom": "^16.4.2",
+		"react-scripts": "^2.1.1"
 	},
 	"scripts": {
 		"start": "react-scripts start",

@@ -4,21 +4,26 @@ import { Consumer } from '../../context';
 import getDate from '../../getDate';
 
 class Task extends Component {
+	state = {
+		id: null,
+		text: '',
+		date: '',
+	};
+
 	deleteTask = (id, dispatch, text) => {
 		// Dodanie daty ukończenia zadania
 		let deleteDate = getDate();
 
-		dispatch({ type: 'DELETE_TASK', payload: id });
+		console.log(id);
+
+		dispatch({ type: 'DELETE_TASK', payload: { id } });
 		dispatch({ type: 'DELETED_TASK', payload: { id, text, deleteDate } });
 	};
 
-	modifyTask = (id, dispatch, text, showModal) => {
-		let modifiedDate = getDate();
+	modifyTask = (showModal, id) => {
+		this.props.callbackFromParent(id);
 
 		showModal();
-
-		text = 'test';
-		dispatch({ type: 'MODIFY_TASK', payload: { id, text, modifiedDate } });
 	};
 
 	render() {
@@ -42,10 +47,10 @@ class Task extends Component {
 									className="task-icons__modify-icon"
 									onClick={this.modifyTask.bind(
 										this,
-										id,
-										dispatch,
-										text,
 										showModal,
+										id,
+										text,
+										date,
 									)}
 								>
 									<div className="task-icons__modify-icon--yellow-circle" />

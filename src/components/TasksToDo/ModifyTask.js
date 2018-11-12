@@ -4,6 +4,7 @@ import getDate from '../../getDate';
 
 class ModifyTask extends Component {
 	state = {
+		id: null,
 		text: '',
 		date: '',
 	};
@@ -26,19 +27,21 @@ class ModifyTask extends Component {
 			return;
 		}
 
-		// Dodanie daty stworzenia zadania
+		// Dodanie daty modyfikacji zadania
 		date = getDate();
 
-		// Stworzenie nowego zadania, gdzie id pobierane jest z aktualnej daty
-		const newTask = {
+		// Stworzenie zmodyfikowanego zadania
+		const modifiedTask = {
 			id: Date.now(),
+			modifiedId: this.props.id,
 			text,
 			date,
 		};
 
-		dispatch({ type: 'ADD_TASK', payload: newTask });
+		dispatch({ type: 'MODIFY_TASK', payload: modifiedTask });
 
 		// Czyszczenie inputa
+
 		this.setState({ text: '' });
 	};
 
@@ -49,6 +52,7 @@ class ModifyTask extends Component {
 			<Consumer>
 				{value => {
 					const { dispatch } = value;
+
 					return (
 						<form
 							className="add-task"
@@ -69,6 +73,7 @@ class ModifyTask extends Component {
 								type="submit"
 								value="Zamień"
 								className="add-task__button"
+								onClick={value.hideModal}
 							/>
 							<div className="error">
 								Nie możesz zmodyfikować na puste zadanie!
