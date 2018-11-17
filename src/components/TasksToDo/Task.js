@@ -14,8 +14,6 @@ class Task extends Component {
 		// Dodanie daty ukończenia zadania
 		let deleteDate = getDate();
 
-		console.log(id);
-
 		dispatch({ type: 'DELETE_TASK', payload: { id } });
 		dispatch({ type: 'DELETED_TASK', payload: { id, text, deleteDate } });
 	};

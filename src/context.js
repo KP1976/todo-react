@@ -23,9 +23,6 @@ const reducer = (state, action) => {
 			return {
 				...state,
 				tasks: state.tasks.map(task => {
-					// return task.id === action.payload.modifiedId
-					// 	? (task = action.payload)
-					// 	: task;
 					if (task.id === action.payload.modifiedId) {
 						task.id = action.payload.id;
 						task.text = action.payload.text;
@@ -65,7 +62,3 @@ export default Provider;
 
 // Zamiast używać <Contex.Consumer></Contex.Consumer> będzie można użyć tylko <Consumer></Consumer>
 export const Consumer = Context.Consumer;
-
-// return task.id === action.payload.modifiedId
-// 						? (task = action.payload)
-// 						: task;

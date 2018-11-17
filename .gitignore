@@ -22,5 +22,3 @@ yarn-error.log*
 
 /.vscode
 /.sass-cache
-
-package-lock.json

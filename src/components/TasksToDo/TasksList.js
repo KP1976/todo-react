@@ -8,7 +8,7 @@ class TasksList extends Component {
 		id: null,
 	};
 
-	myCallBack = (dispatch, id) => {
+	myCallBack = id => {
 		this.setState({ id });
 	};
 
@@ -34,11 +34,7 @@ class TasksList extends Component {
 									<Task
 										key={task.id}
 										task={task}
-										callbackFromParent={this.myCallBack.bind(
-											this,
-											dispatch,
-											task.id,
-										)}
+										callbackFromParent={this.myCallBack.bind(this, task.id)}
 									/>
 								))}
 							</ul>
